@@ -46,7 +46,7 @@ const app = new Vue(
                 },
                 {
                     text: 'pulire la casa',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'lavare i vestiti',
@@ -54,7 +54,7 @@ const app = new Vue(
                 },
                 {
                     text: 'fare la spesa',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'studiare coding',

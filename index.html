@@ -17,7 +17,7 @@
                 <div class="col-12 p-5">
                     <h1 class="text-center d-inline-block w-100 mb-3">TodoListo</h1>
                     <ul class="list-group">
-                        <li v-for="task in todoList" class="list-group-item"> {{ task.text }} </li>
+                        <li v-for="task in todoList" :class="(task.done === true) ? 'ae-line-through' : ''" class="list-group-item text-capitalize"> {{ task.text }} </li>
                         <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
                         <li class="list-group-item">Morbi leo risus</li>
                         <li class="list-group-item">Porta ac consectetur ac</li>
