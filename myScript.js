@@ -36,8 +36,6 @@ const app = new Vue(
         
         data:{
 
-            testo: 'ciao',
-
             todoList: [
                 
                 {
@@ -67,12 +65,17 @@ const app = new Vue(
         methods:{
 
              removeElement(indexElement){
-                debugger
-                 this.todoList = this.todoList.filter(function (element, index) {index !== indexElement}
-                 )    
-                 console.log(this.todoList)         
-
+                
+                /*debugger
+                 this.todoList = this.todoList.filter ((element, index) => index !== indexElement)    
+                 console.log(this.todoList)
+                 */
+                 this.todoList = this.todoList.filter(
+                    (element, index) => index !== indexElement
+                  );
+                              
              },
+
            
         },
     }
