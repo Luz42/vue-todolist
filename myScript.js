@@ -58,7 +58,9 @@ const app = new Vue(
                     text: 'studiare coding',
                     done: true
                 },
-            ]
+            ],
+
+            newElement: '',
 
         },
 
@@ -76,7 +78,41 @@ const app = new Vue(
                               
              },
 
-           
-        },
-    }
+             addElement(){
+
+                if(this.newElement && isNaN(this.newElement)){
+                    let presentElement = false
+                    this.todoList.forEach(element => {
+                    //allora verrà aggiunto nella lista
+                    if(this.newElement == element.text){
+                        presentElement = true
+                    }
+                    });
+
+                    switch(presentElement){
+                        case false:
+                        
+                            let newObject = {
+                                text: this.newElement,
+                                done: false
+                            }
+                            this.todoList.push(newObject)
+
+                            break;
+                            
+                        default:
+
+                        alert(`${this.newElement} è già presente nella lista`)
+
+                    }
+                }
+                else{
+                    alert(`Inserisci un valore valido`)
+                }
+
+                this.newElement = ''
+            }
+
+        } 
+    },
 )
