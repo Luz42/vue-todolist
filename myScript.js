@@ -66,6 +66,14 @@ const app = new Vue(
 
         methods:{
 
+             removeElement(indexElement){
+                debugger
+                 this.todoList = this.todoList.filter(function (element, index) {index !== indexElement}
+                 )    
+                 console.log(this.todoList)         
+
+             },
+           
         },
     }
 )
