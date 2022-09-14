@@ -111,6 +111,12 @@ const app = new Vue(
                 }
 
                 this.newElement = ''
+            },
+
+            taskDoneOrNot(element){
+
+                element.done === true ? element.done = false : element.done = true
+            
             }
 
         } 

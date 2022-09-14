@@ -1,3 +1,7 @@
 .ae-line-through{
     text-decoration: line-through
 };
+
+.ae-pointer{
+    cursor: pointer !important;
+}
