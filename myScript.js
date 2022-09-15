@@ -115,7 +115,8 @@ const app = new Vue(
 
             taskDoneOrNot(element){
 
-                element.done === true ? element.done = false : element.done = true
+                // element.done === true ? element.done = false : element.done = true
+                element.done = !element.done
             
             }
 
